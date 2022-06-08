@@ -1,0 +1,18 @@
+equivalent de proc lifetest :
+https://theprogrammingexpert.com/proc-lifetest-equivalent-in-pyhton/
+
+estimateur de Keplan-Meier :
+https://fr.wikipedia.org/wiki/Estimateur_de_Kaplan-Meier
+
+survival-sickit :
+https://scikit-survival.readthedocs.io/en/stable/user_guide/index.html
+
+
+Macro de Allison :p291 - p298
+https://usermanual.wiki/Document/Paul20D20AllisonSurvival20Analysis20Using20SAS20A20Practical20Guide2C20Second20EditionSAS20Publishing202010.1982500032/help
+
+KaplanMeierFitter :
+https://lifelines.readthedocs.io/en/latest/fitters/univariate/KaplanMeierFitter.html
+
+>conda install -c sebp scikit-survival
+>pip install lifelines

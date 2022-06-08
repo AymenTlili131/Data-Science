@@ -1,0 +1,7 @@
+2022-05-20 01:04:50,467 INFO    MainThread:21584 [internal.py:wandb_internal():93] W&B internal server running at pid: 21584, started at: 2022-05-20 01:04:50.467046
+2022-05-20 01:04:50,469 INFO    WriterThread:21584 [datastore.py:open_for_write():75] open: C:\Users\Aymen\Desktop\Neji\wandb\run-20220520_010230-1zrvw176\run-1zrvw176.wandb
+2022-05-20 01:04:50,470 DEBUG   HandlerThread:21584 [handler.py:handle_request():141] handle_request: shutdown
+2022-05-20 01:04:50,471 INFO    HandlerThread:21584 [handler.py:finish():806] shutting down handler
+2022-05-20 01:04:50,486 INFO    SenderThread:21584 [sender.py:finish():1106] shutting down sender
+2022-05-20 01:04:51,479 INFO    WriterThread:21584 [datastore.py:close():279] close: C:\Users\Aymen\Desktop\Neji\wandb\run-20220520_010230-1zrvw176\run-1zrvw176.wandb
+2022-05-20 01:04:51,479 INFO    MainThread:21584 [internal.py:handle_exit():80] Internal process exited

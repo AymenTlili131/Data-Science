@@ -1,0 +1,8 @@
+https://avalanche.continualai.org/from-zero-to-hero-tutorial/05_evaluation
+https://analyticsindiamag.com/avalanche-a-python-library-for-continual-learning/
+https://avalanche.continualai.org/from-zero-to-hero-tutorial/05_evaluation
+https://avalanche.continualai.org/getting-started/how-to-install
+https://avalanche.continualai.org/from-zero-to-hero-tutorial/04_training
+
+Multi Threading in python:
+https://machinelearningmastery.com/multiprocessing-in-python/?fbclid=IwAR0nT8Sr7I3mIkhBkpGHGoFvY1D5OjbfWztcoRQJs5b0NVGcK5Pwdun5uX4

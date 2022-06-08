@@ -1,0 +1,41 @@
+WARNING:tensorflow:From C:\Users\Aymen\.conda\envs\p36workshop\lib\site-packages\tensorflow\python\ops\init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+conv2d (Conv2D)              (None, 321, 24, 32)       320
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 161, 12, 32)       0
+_________________________________________________________________
+batch_normalization (BatchNo (None, 161, 12, 32)       128
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 159, 10, 32)       9248
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 80, 5, 32)         0
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 80, 5, 32)         128
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 79, 4, 32)         4128
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 40, 2, 32)         0
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 40, 2, 32)         128
+_________________________________________________________________
+flatten (Flatten)            (None, 2560)              0
+_________________________________________________________________
+dense (Dense)                (None, 64)                163904
+_________________________________________________________________
+dropout (Dropout)            (None, 64)                0
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                4160
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 64)                0
+_________________________________________________________________
+dense_2 (Dense)              (None, 13)                845
+=================================================================
+Total params: 182,989
+Trainable params: 182,797
+Non-trainable params: 192
+_________________________________________________________________

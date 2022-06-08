@@ -1,0 +1,12 @@
+2022-05-12 12:18:16,249 - DEBUG - {'gpu': 0, 'seed': 2019, 'sr': 44100, 'hop_length': 1024, 'n_fft': 2048, 'dataset': '../Training/', 'split_mode': 'random', 'learning_rate': 0.001, 'lr_min': 0.0001, 'lr_decay_factor': 0.9, 'lr_decay_patience': 6, 'batchsize': 4, 'accumulation_steps': 1, 'cropsize': 256, 'patches': 16, 'val_rate': 0.2, 'val_filelist': None, 'val_batchsize': 6, 'val_cropsize': 256, 'num_workers': 6, 'epoch': 200, 'reduction_rate': 0.5, 'reduction_level': 0.2, 'mixup_rate': 0.5, 'mixup_alpha': 1.0, 'pretrained_model': None, 'debug': False}
+2022-05-12 12:18:16,289 - ERROR - [WinError 3] Le chemin d’accès spécifié est introuvable: '../Training/mixtures'
+Traceback (most recent call last):
+  File "./vocal-remover/train.py", line 255, in <module>
+    main()
+  File "./vocal-remover/train.py", line 132, in main
+    train_filelist, val_filelist = dataset.train_val_split(
+  File "C:\Users\Aymen\Desktop\Neji\vocal-remover\lib\dataset.py", line 135, in train_val_split
+    filelist = make_pair(
+  File "C:\Users\Aymen\Desktop\Neji\vocal-remover\lib\dataset.py", line 119, in make_pair
+    for fname in os.listdir(mix_dir)
+FileNotFoundError: [WinError 3] Le chemin d’accès spécifié est introuvable: '../Training/mixtures'

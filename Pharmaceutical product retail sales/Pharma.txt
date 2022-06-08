@@ -1,0 +1,40 @@
+weak/strong stationarity
+ADF
+PACF
+ACF
+--->Arima
+Seasonal ?
+--->Sarima ?
+Scrape google trends : word 'toux'
+--->Sarimax 
+--->compare with Auto-Arima 
+	different metrics
+	Information criterion
+	Grid Search vs stepwise
+--->Arch , Garch for volatility
+--->Clients , sickit survival/lifelines
+-----------------------with more data
+--->CNN
+--->linear models like Lazy programmer course
+--->multi output like Lazy programmer course
+--->LSTM
+
+http://tomaugspurger.github.io/modern-7-timeseries.html
+https://en.wikipedia.org/wiki/Unevenly_spaced_time_series
+https://traces.readthedocs.io/en/latest/
+https://traces.readthedocs.io/en/latest/examples.html#examples
+https://blogs.oracle.com/ai-and-datascience/post/how-to-forecast-with-limited-historical-data
+
+Vous trouverez ci-joint 826 factures de janvier 2019 à décembre 2021. L'exercice consiste à prédire les futures factures par client, de janvier et février 2022.
+
+Exemple de prédiction:
+
+Client COPHADIS achète en janvier:
+96 HUMER Phyto toux grasse sirop 125ml
+12 HUMER Phyto Appétit sirop 125ml
+24 HUMER Phyto colique solution buv 125ml
+48 HUMER Phyto OMEGA3 sirop 125ml
+144 HUMER Phyto Grippe sirop 125ml
+96 HUMER Phyto Rhume toux séche sirop 125ml
+ 
+

@@ -1,0 +1,7 @@
+2022-05-12 18:12:35,440 INFO    MainThread:17084 [internal.py:wandb_internal():93] W&B internal server running at pid: 17084, started at: 2022-05-12 18:12:35.440423
+2022-05-12 18:12:35,440 INFO    WriterThread:17084 [datastore.py:open_for_write():75] open: C:\Users\Aymen\Desktop\Neji\wandb\run-20220512_181121-p9dpup3k\run-p9dpup3k.wandb
+2022-05-12 18:12:35,445 DEBUG   HandlerThread:17084 [handler.py:handle_request():141] handle_request: shutdown
+2022-05-12 18:12:35,445 INFO    HandlerThread:17084 [handler.py:finish():806] shutting down handler
+2022-05-12 18:12:35,483 INFO    SenderThread:17084 [sender.py:finish():1106] shutting down sender
+2022-05-12 18:12:36,456 INFO    WriterThread:17084 [datastore.py:close():279] close: C:\Users\Aymen\Desktop\Neji\wandb\run-20220512_181121-p9dpup3k\run-p9dpup3k.wandb
+2022-05-12 18:12:36,456 INFO    MainThread:17084 [internal.py:handle_exit():80] Internal process exited

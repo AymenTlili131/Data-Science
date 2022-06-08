@@ -1,0 +1,15 @@
+PS:
+-Please Cite the OG auther/researcher when using the dataset or his work . terms and conditions apply to all sub-users
+-running the entirety of Graph extrating notebook will create a directory tree be aware and change as necessary
+-using the entire list of nations will take 11GB of RAM best to wrangle every json the restart kernel to free up RAM
+-networkx is the library used to draw graphs(passing network()) , the stats relating to each graph are saved in that competetion's home folder as a single line dataframe
+-when saving the second half heatmaps you should flip the 'attack' arrow
+-I only handled the case where the team is "HOME", change what is necessary to get "Away graphs"
+-If you decided to use continual Learning to train over each match week know that Avalanche is a pytorch compatible framework and has weight/Node support and multiple learning strategies to use . pick your poison !
+
+-I included the dataset's description as "preview_2", when i sent the researcher a private mail to use the dataset he linked me the github to making other useful plots . check out "Soccer analysis" folder for the github repo clone
+-I took a screenshot of Weights and biases' script but it relies on browser based API key , ask for one for "academic reasons " and you'll get mailed what i saved in png attached to this
+Problems encountered :
+-Some team names have non UTF-8 encoded names like "Bayen Munich" the u is supposed to be an umlaut and is replaced by /0x___ encoding that misses with directory creation (unless u add r'path' to to_csv method). a work around is to call teams by their ID.
+-The researher used the data to make analysis about the entire league, I used it in match specific context , so you might run into singuler matrix or Kernel density estimation errors (but i caught them). but be aware you could end up with blank heatmaps IF there isn't enough observations in that specific MATCH !
+-you might have to unpack defaultdict(List) types when handling invasion and acceleration index , I did it in code but it's slow

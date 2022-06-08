@@ -1,0 +1,18 @@
+https://figshare.com/collections/Soccer_match_event_dataset/4415000
+
+https://figshare.com/articles/software/Plots_replication_code_of_Nature_Scientific_Data_paper/11473365?backTo=/collections/Soccer_match_event_dataset/4415000
+
+If you use the data in this collection for your research or analyses, cite the following papers:
+
+- Pappalardo et al., (2019) A public data set of spatio-temporal match events in soccer competitions, Nature Scientific Data 6:236, https://www.nature.com/articles/s41597-019-0247-7
+
+- Pappalardo et al. (2019) PlayeRank: Data-driven Performance Evaluation and Player Ranking in Soccer via a Machine Learning Approach. ACM Transactions on Intellingent Systems and Technologies (TIST) 10, 5, Article 59 (September 2019), 27 pages. DOI: https://doi.org/10.1145/3343172
+
+https://github.com/Friends-of-Tracking-Data-FoTD/mapping-match-events-in-Python
+
+---------------------
+OTHER LINKS:
+https://dl.acm.org/doi/10.1145/2557642.2563677
+https://www.nature.com/articles/s41597-019-0247-7
+https://www.statsperform.com/resource/utilising-a-merged-tracking-event-dataset-five-ways-of-identifying-new-insights/
+https://www.statsperform.com/team-performance/football-performance/match-analysis/

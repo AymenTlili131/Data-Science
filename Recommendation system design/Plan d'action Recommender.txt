@@ -1,0 +1,107 @@
+
+--->watch audio course
+Audio Signal Processing for Machine Learning:
+		https://www.youtube.com/watch?v=iCwMQJnKk2c&list=PL-wATfeyAMNqIee7cH3q1bh4QJFAaeNv0&ab_channel=ValerioVelardo-TheSoundofAI
+10 - Understanding audio data for deep learning:
+		https://www.youtube.com/watch?v=m3XbqfIij_Y&list=PL-wATfeyAMNrtbkCNsLcpoAyBBRJZVlnf&index=10&ab_channel=ValerioVelardo-TheSoundofAI
+11- Preprocessing audio data for Deep Learning:
+		https://www.youtube.com/watch?v=Oa_d-zaUti8&ab_channel=ValerioVelardo-TheSoundofAI
+https://magenta.tensorflow.org/ddsp
+https://www.youtube.com/c/NoCopyrightSounds/playlists?view=50&sort=dd&shelf_id=7
+https://youtubemultidownloader.net/playlists.html
+
+
+
+https://github.com/musikalkemist/DeepLearningForAudioWithPython
+
+semi-supervised:
+https://en.wikipedia.org/wiki/Semi-supervised_learning
+https://calculatedcontent.com/2014/09/23/machine-learning-with-missing-labels-transductive-svms/
+http://vikas.sindhwani.org/svmlin.html
+
+
+Association Learning :
+https://www.ibm.com/cloud/blog/supervised-vs-unsupervised-learning
+https://en.wikipedia.org/wiki/Association_rule_learning#Apriori_algorithm
+https://stackabuse.com/association-rule-mining-via-apriori-algorithm-in-python/
+
+https://techxplore.com/news/2022-05-algorithms-power-amazon-netflix-satellite.html?fbclid=IwAR0HK9uUSC0oD3WthRFjWWkhui8dozRUlSwdlZSkDvxTlz-p6txInJVnK-o
+
+--->watch TS course
+
+Generate Genres
+	stratified https://askcodez.com/difference-entre-stratifiedkfold-et-stratifiedshufflesplit-dans-sklearn.html
+				https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html
+speech seperation 
+	top 10 p2w voice seperators https://windowsreport.com/vocal-remover-software/
+	https://github.com/tsurumeso/vocal-remover/releases
+	https://vocali.se/en
+	
+https://www.tensorflow.org/api_docs/python/tf/keras/regularizers/L1L2	
+	
+	
+speech Recognition
+	path/to/dataset/
+  +- instruments/
+  |    +- ...
+  |    
+  +- mixtures/
+       +- 01_foo_mix.wav
+Create Topics NMF tf_idf content
+
+
+https://en.wikipedia.org/wiki/Recommender_system
+https://askcodez.com/difference-entre-stratifiedkfold-et-stratifiedshufflesplit-dans-sklearn.html
+https://keras.io/api/layers/regularizers/
+https://www.tensorflow.org/tutorials/images/data_augmentation
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
+https://pytorch.org/audio/stable/datasets.html
+https://docs.wandb.ai/guides/sweeps
+
+https://www.kaggle.com/search?q=NMF
+VERY INSTRUCTIVE:https://www.kaggle.com/code/deborareis/svd-nmf-topic-modeling
+http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/	
+https://www.kaggle.com/competitions/nlpbsb/code
+https://realpython.com/build-recommendation-engine-collaborative-filtering/?fbclid=IwAR2dgk3DLMdQaQFFCXSyqFpKvF1nt5fJZL9NPbPnwDXqMLlfVYTLHpDvcmM
+
+
+
+Artist Name
+Artist ID
+Song title
+Create Topics NMF tf_idf title
+Song Length
+User class
+	ID
+	Name
+	artist:# of songs played dict __missing__=0
+	watch History []
+	Friend List
+	Age
+A priori algorithm
+Recommendation Scoring Heuristic
+GUI
+
+
+
+
+
+--->	Neji Recommender System
+		TF-IDF
+		NMF
+		CNN
+		
+Amélioration : 
+	Compile, metrics
+	validation data arguement (Xtest,Ytest)
+			https://towardsdatascience.com/checkpointing-deep-learning-models-in-keras-a652570b8de6
+			https://towardsdatascience.com/increase-the-accuracy-of-your-cnn-by-following-these-5-tips-i-learned-from-the-kaggle-community-27227ad39554
+	
+	Date of release
+	Artist nationality
+	Number of artists
+	Speech recognition
+	Topic: Title 
+	Topic: Song
+	include Age of user
+	Add user history
