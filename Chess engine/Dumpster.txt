@@ -1,0 +1,164 @@
+        """ for tup in L:           #rank, file =tuple
+            for x,y in tup:     #coord
+            #N=np.uint64( (self.position_bb | (np.uint64(1) <<8))) 
+                    self.motion_bb |= np.uint64(1)<<x   #on x-th index set bitboard to one , then union (+) motion_bb
+                    self.motion_bb |= np.uint64(1)<<y       """
+
+"""
+        #check origin
+        W_Diag=copy.deepcopy(Diag.DW)
+        B_Diag=copy.deepcopy(Diag.DB)
+        ch0=self.cur_pos.get_b_string(P.initial_bb,length=64)
+        for i,c in enumerate(ch0):
+            if c=="1":
+                if i in Diag.White_squares:
+                    ch=self.cur_pos.get_b_string(P.position_bb,length=64)
+                    D=dict()
+                    for i,c in enumerate(ch):
+                        if c=="1":
+                            for D1 in W_Diag :
+                                if i in D1:
+                                    W_Diag.remove(D1)
+                                    break 
+                            for D2 in W_Diag:
+                                if i in D2 :  
+                                    break
+                if i in Diag.Black_squares:
+                    ch=self.cur_pos.get_b_string(P.position_bb,length=64)
+                    D=dict()
+                    for i,c in enumerate(ch):
+                        if c=="1":
+                            for D1 in B_Diag :
+                                if i in D1:
+                                    B_Diag.remove(D1)
+                                    break 
+                            for D2 in B_Diag:
+                                if i in D2 :  
+                                    break
+                D[i]=(D1,D2)
+        
+ 
+         """
+          
+        #  def south_ray(self):  
+"""   N=np.uint64( (self.position_bb | (np.uint64(1) >>8))) bit shift to right
+            while (N>0): 
+                N|= (np.uint64(1)>>8)
+
+    
+    class Piece :
+    def __init__(self,color :int ) :
+        self.color=color               #{0:"W",1:"B"}
+        self.initial_bb=bitboard()
+        self.position_bb=bitboard()
+        self.motion_bb=bitboard()
+        self.attack_bb=bitboard()
+        self.attackers_bb=dict()#piece : square
+        """
+"""
+      #  def west_ray(self):
+            N=np.uint64( (self.position_bb | (np.uint64(1) >>1)))
+            while (N>0): 
+                N|= (np.uint64(1)>>1)
+      #  def south_ray(self):
+            N=np.uint64( (self.position_bb | (np.uint64(1) >>8)))
+            while (N>0): 
+                N|= (np.uint64(1)>>8) """
+            #  val += ' ▓'
+    #      continue
+    #  val += ' ░'
+                        """
+                    P=self.get_Piece_by_sq(i)
+                    self.val+=P.symbol
+                    else:
+                        pass
+                    """
+        #Dw1 | Dw2 | Dw3 |Dw4 |Dw5 |Dw6 |Dw7 |Dw8
+    #|Db8 |Db9 |Db10 |Db11 |Db12 |Db13 |Db14 |Db15
+    #Dw1 , Dw2 , Dw3 ,Dw4 ,Dw5 ,Dw6 ,Dw7 ,Dw8
+    #Db8 ,Db9 ,Db10 ,Db11 ,Db12 ,Db13 ,Db14 ,Db15
+
+
+             ##FEN DESCRIPTION:
+         #6 fields sep by " "
+         #concat Piece.Letter and / per row
+         # color of who to move next . w means white moves next 
+         # castling rights if none :takes "-" K king side white Q Queen side white k king side black q queen side  
+         #en passant algebric target square (square of pawn who just moved 2 squares) else takes "-"
+         #Halfmove clock: The number of ply-s since the last capture or pawn advance
+         #Fullmove number:number of full move.starts at 1,incremented after Black's move
+"""
+""
+def location(self,b:np.uint64): #method that takes current position bitboard and returns matching Rank , File tuple
+                    L=list()
+                    for R,F in Rank.ranks_List_bb, File.file_List_bb:
+                        for x,y in R,F:
+                            if (x==b and y==b) :
+                                L.append((x,y))
+
+                def get_empty_squares_bitboard(self):
+                    return 1-self.occupied_squares_bitboards
+                def update_bitboards_per_color(self):
+                    self.B_Pieces=self.black_rook_bitboard |self.black_pawn_bitboard |self.black_knight_bitboard |self.black_bishop_bitboard |self.black_queen_bitboard |self.black_king_bitboard  
+                    self.W_Pieces=self.white_rook_bitboard |self.white_pawn_bitboard |self.white_knight_bitboard |self.white_bishop_bitboard |self.white_queen_bitboard | self.white_king_bitboard 
+                    self.occupied_squares_bitboards = self.B_Pieces | self.W_Pieces
+"""
+"""
+
+        def rook_motion(self):
+            L= self.position_bb
+            for tup in L:           #rank, file =tuple
+                for x,y in tup:     #coord
+                #N=np.uint64( (self.position_bb | (np.uint64(1) <<8))) 
+                    self.motion_bb |= np.uint64(1)<<x   #on x-th index set bitboard to one , then union (+) motion_bb
+                    self.motion_bb |= np.uint64(1)<<y
+            self.attack_bb=self.motion_bb
+            #add castling to motions allowed when valid
+            return self.motion_bb
+        self.motion_bb=self.rook_motion() 
+
+    
+        self.position_bb=self.initial_bb
+        if self.position_bb in np.uint64( range(8,16)): #2nd rank
+            self.motion_bb =np.uint64( (self.position_bb | (np.uint64(1) <<8))) | np.uint64( (self.position_bb | (np.uint64(1) <<16))) #+8 #+16 north
+        elif self.position_bb not in np.uint64( range(56,64)): #last rank
+            self.motion_bb =np.uint64( (self.position_bb | (np.uint64(1) <<8)))
+
+        #add en passant attack for 1 turn when legal and remove it after
+        if self.position_bb not in np.uint64( range(8,57,8))|np.uint64(range(15,64,8)) : #not 1st and 8th rank pawn attacks
+            self.attack_bb=np.uint64( (self.position_bb | (np.uint64(1) <<7))) | (self.position_bb | (np.uint64(1) <<9)) #+7  north west +9 north east
+        if self.position_bb in np.uint64( range(8,57,8)): #A file attack only right
+            self.attack_bb=np.uint64(self.position_bb | (np.uint64(1) <<9))
+        if self.position_bb in np.uint64(range(15,64,8)): #F file attack only left
+            self.attack_bb=np.uint64(self.position_bb | (np.uint64(1) <<7))
+piece_to_glyph = {
+    Piece.wP: "♙",
+    Piece.bP: "♟︎",
+    Piece.wR: "♖",
+    Piece.bR: "♜",
+    Piece.wN: "♘",
+    Piece.bN: "♞",
+    Piece.wB: "♗",
+    Piece.bB: "♝",
+    Piece.wQ: "♕",
+    Piece.bQ: "♛",
+    Piece.wK: "♔",
+    Piece.bK: "♚",
+}
+
+piece_to_value_mg = {
+    Piece.wP: 1,
+    Piece.bP: 1,
+    Piece.wR: 5,
+    Piece.bR: 5,
+    Piece.wN: 3,
+    Piece.bN: 3,
+    Piece.wB: 3,
+    Piece.bB: 3,
+    Piece.wQ: 9,
+    Piece.bQ: 9,
+    Piece.wK: np.inf,
+    Piece.bK: np.inf,
+}
+Transfer to Game class where we have Gamephase Variable (late game values differ from this)
+    """ 
