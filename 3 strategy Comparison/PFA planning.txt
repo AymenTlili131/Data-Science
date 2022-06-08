@@ -1,0 +1,71 @@
+Install influx db
+https://docs.influxdata.com/influxdb/v2.2/install/?t=Windows
+Create Table for transactions : SQL
+
+Time ,proftolio, Symbol , Type (buy or sell) ,Volume (% of equity),price when placing ,price when ended ,profit
+
+Scrape the data yahoo finance into influx DB
+
+
+choose the 3 symbol pairs
+https://towardsdatascience.com/free-stock-data-for-python-using-yahoo-finance-api-9dafd96cad2e
+JPY/CHF
+USD/eur
+gbp/aud
+
+make incremental addition of steps
+Step Manager
+	take symbol
+	get 0th step
+	
+	make 1 step from 
+	
+	reset steps
+	
+	handle end of dataset case
+
+make Portefolio class ( Symbol ,method : (1of the 3))
+	
+	#init:
+	name :
+	symbol
+	initial balance:
+	connect to transactions
+	connect to influxDB
+	
+	#
+	current balance
+	
+	#make_step()
+		#increment associted step manager
+		#predict
+		#compare results and save to transactions
+
+SARIMAX + EGARCH
+
+BRU +CNN + sweep CONfig
+
+Define RL and apply
+
+BRU
+
+upload to drive
+
+Resume RL
+
+Resume TS
+
+Apache Airflow
+
+mention Dask and Streamz 
+-----------
+make a Class for each Classifier : CNN , SARIMAX , RL
+
+Sarimax update rate
+CNN update rate	
+	sweep
+
+Dask to call all simultaneously
+
+Save summary to folder with Google drive 
+

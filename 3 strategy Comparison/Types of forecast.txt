@@ -1,0 +1,8 @@
+	I.1step forecast
+	II.multi step forecast
+	III.multioutput forecast
+		Direct Multi-step Forecast Strategy.
+		Recursive Multi-step Forecast Strategy.
+		Direct-Recursive Hybrid Multi-step Forecast Strategies.
+		Multiple Output Forecast Strategy.
+		
