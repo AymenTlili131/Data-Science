@@ -1,0 +1,58 @@
+
+	Static attributes
+class Voit
+
+Object Voit (singleton) [meme fichier , avec le meme nom]
+--> objects companions ,contient les déclarations statiques
+si on utilise plusieurs champs on écrit(import Voiture._ )
+comme une importation dans java ( on peut le faire dans le body de la classe)
+
+def this(,)
+///////la premiére instruction fait appel à un seul paramétre
+
+case class Rect(private var px:Int=2,private var py:Int=8)
+def x =px
+def x_(x:Int)=
+	if(a<0)
+	println("_________ !")
+	else
+	px=a 
+
+object Voiture
+{
+   var V_max:Int=130  ;
+   def apply(fabricant: String,modele: String )= new Voiture(fabricant: String,modele: String )
+}
+
+class Voiture private(val fabricant: String, val modele: String ) {
+import Voiture._
+var vitesse: Double = 0;
+var isOn: Boolean = false;
+def start(): Unit = {
+isOn = true
+println(s"Voiture started ")
+}
+def accelerer(rate: Double): Unit = {
+  var test=vitesse+ rate
+  if ( test>Voiture.V_max)
+  {vitesse = Voiture.V_max
+println(s"Voiture accelere a $rate par seconde.")}
+  
+  
+} 
+def decelerer(rate: Double): Unit = {
+vitesse -= rate
+println(s"Voiture ralenti a $rate par seconde.")
+}
+def stop(): Unit = {
+vitesse = 0;
+isOn = false;
+println("Voiture s’arrete.")
+}
+}
+
+var V = Voiture ("Toyota","Rav4")
+V.start()
+V.accelerer(0.7)
+V.decelerer(0.3)
+V.stop()

@@ -1,0 +1,125 @@
+class Point
+{ var x: Int =0
+	def getX = x
+	def setX(a:Int)= x=a
+}
+
+object TestPoint extends App
+{
+val p:Point = new Point()
+p.x=7
+p.setX(4)
+println(p.getX)
+}
+
+//x: getitem function
+//x_= : setter function
+class Point
+{	private var _x: Int =0 //les getters/setters auto-générés seront privés aussi
+	//def getX = x
+	//def setX(a:Int)= x=a
+	p.x_=(7)
+	println(p.x) //println (p x)
+		def setX(a:Int)={
+	if(a<0) throw new Exception("Erreur 1")
+	else _x=a
+	}
+		def x=_a
+		def x_=(a:Int):Unit=     //(+) on peut appeler la méthode avec p.x est les tests seront faits
+	if(a<0 throw new Exception "Erreur 2")
+	else _x=a
+}
+
+
+---------------------Constructeur-----------------------
+I.constructeur primare (entete class)
+II.constructeur auxiliare (this)
+constructeur par défault(sans paramétres)
+
+I.
+	class Point(var a:Int)
+{var x:Int =a 
+}
+
+	class Point(var a : int)//class , attribut , paramétres et ses getters/setters
+
+	object Test etends App{
+val p:Point = new Point(5)
+}
+
+II.
+class Point(var x: Int , var y:Int)
+{def this(a:Int)=this(a,a)
+def this()=this(0,0)
+}
+//class Point( x: Int , var y:Int) // private val
+
+Exercice:
+	classe rationnelle comprend a nominateur b dénomitaur , + add -sub Xmul /div retournant rationel 
+	
+	
+	
+class Rationnel(var a: Int , var b:Int)
+{	
+  private def printWarning():Unit ={if (b==0) println("WARNING: Out of bounds")} 
+  var valeur =(a.toFloat/b)
+
+  def +(z:Rationnel):Rationnel ={
+    var res= new Rationnel(0,1)
+    res.valeur=valeur+z.valeur
+    return res
+  }
+    def add(z:Rationnel):Rationnel ={
+    var res= new Rationnel(0,1)
+    res.valeur=valeur+z.valeur
+    return res
+  }
+  
+    def -(z:Rationnel):Rationnel ={
+    var res= new Rationnel(0,1)
+    res.valeur=valeur-z.valeur
+    return res
+  }
+  def sub(z:Rationnel):Rationnel ={
+    var res= new Rationnel(0,1)
+    res.valeur=valeur-z.valeur
+    return res
+  }
+  def mul(z:Rationnel):Rationnel ={
+    var res= new Rationnel(0,1)
+    res.valeur=valeur*z.valeur
+    return res
+  }
+    def *(z:Rationnel):Rationnel ={
+    var res= new Rationnel(0,1)
+    res.valeur=valeur*z.valeur
+    return res
+  }
+  
+    def /(z:Rationnel):Rationnel ={
+    var res= new Rationnel(0,1)
+    res.valeur=valeur/z.valeur
+    return res
+  }
+  def div(z:Rationnel):Rationnel ={
+    var res= new Rationnel(0,1)
+    res.valeur=valeur/z.valeur
+    return res
+  }
+  
+}
+
+var X=Rationnel(3,2)
+var Y=Rationnel(1,2)
+X.valeur
+X.+(Y).valeur
+X.valeur
+var Z:Rationnel=X+Y ;
+Z.valeur	
+	
+	
+	
+
+QUESTION:
+akber constructeur
+type this : unit

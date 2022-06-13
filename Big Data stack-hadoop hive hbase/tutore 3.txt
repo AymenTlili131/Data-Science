@@ -1,0 +1,68 @@
+1/./start-hadoop.sh
+	gedit empdb.sql
+	create database empdb;
+	use empdb;
+	create table emp (empno int , ename varchar(15),JOB varchar(15),mgr int ,hiredate int , sal int , comm int , daptno int)
+row format delimited fields terminated by ','
+tbl properties('skip.header.line.count'='1','serialization.null.format'=' ');
+	load datsea local in path'/home/U1/Emp.txt' into table Emp;
+	create table dept (deptno int ,dname varchar(15),loc varchar(15)) row format delimited fields terminated by '\t';
+	load data local inpath '/home/U1/Dept.txt' into table dept;
+	hive -f empdb.sql
+	hive  
+		[Vérification : show databases;[supprimer empdb si elle existe déja],use empdb;, ,show tables; ,select * from emp select * from dept;]
+	set hive.cli.print.header.true;
+		[select * from dept; on remarque la présence des header]
+	exit;[quitter hive]
+	hive -e 'set hive.cli.print.header=true;use empdb; select * from emp;'>result.csv [result.csv existe dans le dossier personnel]
+	hive
+5/	select distinct job from empdb.emp;
+	set hive.cli.print.header.true;
+6/	select ename,hiredate fromemp where upper(job)='ANALYST' and year(hiredate)=2011 and month(hierdate)=12;
+7/	select ename,hiredate from emp where months_between(current_date,hiredate)/12>=10;
+8/	select ename,job,sal+nvl(comm,0),if(comm is null,'sans',comm) commission from emp;
+	select ename,job,sal+nvl(comm,0),if nvl(comm,'sans') commission from emp;
+9/	select if(deptno=10,'****',ename),daptno from emp
+10/ select ename, job , if(JOB='PRESIDENT' or job='MANAGER','****',sal),daptno from emp;
+11/ select ename , dname from emp inner join dept on dept.deptno=emp.deptno;  
+	[select ename , dname from emp,dept where emp.deptno=dept.deptno ;] 
+12/   select e.ename from emp e join emp ford on e.job=ford.job where ford.ename='FORD' and e.ename!='FORD';
+
+select ename from emp where enmae!= 'Ford' and job in( select Job from emp where ename='Ford');// les blocs imbriqués ne retourne q'une seule colonne
+select ename from emp where enmae!= 'Ford' and job,hierdate in( select Job,hierdate from emp where ename='Ford');//marche dans sql seulement
+
+13/ select e.ename from emp e join emp c on e.mgr=c.mgr where c.ename='CLARK';
+14/ select ename from emp where mgr in (select empno from emp where JOB='Predisent');
+15/ //les selects imbriqués ne fonctionnent pas car on doit les noms des employés ainsi que leurs chefs
+	select e.name,e.sal,chef,ename,chef,sal from emp e join chef on e.mgr=chef.empno where e.sal>chef.sal; 
+	
+16/ select ename from emp,dept where emp.deptno=dept.deptno and dname=’RESEARCH’ and hiredate in(select hiredate from***********
+
+17/
+set hive.strict.checks.cartesian.product=false;
+select dname from dept where deptno not in (select distinct deptno from emp);
+
+18/
+select count(distinct deptno) from emp;
+
+19/
+select count(*) from emp group by deptno;
+
+20/
+select deptno,sum(sal) from emp group by deptno;
+
+21/
+select deptno,round(avg(sal+nvl(comm,6),3) from emp group by deptno;
+
+22/
+select job,count(*) nbemp from emp group by job order by 1,nbemp;*******************
+
+24/
+select dname,loc,round(avg(sal+nvl(comm,0)),3),count(*) from emp,dept where emp.deptno=dept.deptno group by dname,loc having count(*) >3 and avg(sal)>(select min(sal)*1.1 from emp);
+//sort by s’éxecute aprés le select
+//en utilisant group by , on peut que mettre les noms des colonnes et les fonction d’agrégation 
+
+
+25/ select deptno,job,count(*) from emp group by deptno,job; [order by deptno]
+
+26/ select deptno,dname from dept where deptno in(select deptno from  emp where job =’ANALYST’ group by deptno having count(*) >= 2);

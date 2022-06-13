@@ -1,0 +1,58 @@
+7/
+>>Create external table EmpLocation (EMPNO int , ENAME varchar(15),JOB varchar(15),MGR int , SAL int,
+COMM int , deptno int comment 'département correspondant')
+comment'liste des emp'
+location '/user/EmpLocation' ; [use the name of the table in the desired location , EmpLocation]
+a->>desc empLocation;[or desc formatted EmpLocation shows table comment;]
+b->>insert into EmpLocation values(1000,'ALLEN','SALESMAN',7698,1666,360,30),(,,,,,);
+c->>select * from emplocation;
+d->>truncate table EmpLocation;[suppression interdite car la table est extrerne)
+e->>drop table EmpLocation;[suppression de la table avec drop table empLocation ; show tables ; [La table n'existe plus , mais , e repertoire EmpLocation et les fichiers de données ne sont pas supprimés/seuls les meta-donnée sont supprimés
+
+
+8/
+>>Create table EmpDelimited (EMPNO int ,ENAME varchar(15),JOB varchar(15),MGR int ,Sal int , COMM int , DEPTNO int) row format delimited fields terminated by ',' ,tblproperties('skip.header.lin.count'='1','serialization.null.format'='');
+>>use empdb;
+>>show tables;
+>>Load data local inpath '/home/u1/Emp.txt' into table empdelimited ;
+>> select * from EmpDelimited ;
+
+9/
+>>create table empCTAS as select * from empdelimited where deptno=20;
+>>create temporary table empTemporary like EmDelimited ; [la clause 'like' permet de définir une table en copiant la structure d'une autre table. ka table crée est initialement vide temporaires :
+permet de créer une table temporaire qui disparait en quittant Hive . pas de répertoire crée pour la table temporaire]
+>>hdfs dfs -cat /user/hive/warehouse/empdb.db/empdelimited/Emp.txt
+
+10/Create table EmpParquet (EMPNO int ,ENAME varchar(15),JOB varchar(15),MGR int ,Sal int , COMM int , DEPTNO int) row format delimited fields terminated by ',' stored as parquet;
+>> insert into EmpParquet values(1000,'ALLEN','SALESMAN',7698,1666,360,30);
+>>select * from empparquet; [la taille augment car il n'y a pas de duplication à optimiser]
+>>truncate table empparquet;
+>>alter table EmpParquet set tblpropertie('skip.header.lin.count'='1');
+>>alter table EmpParquet set tblproperties('serialization.null.format'='');
+>>Load data local inpath '/home/u1/Emp.txt' into table empparquet ;
+>>select * from empparquet ; 
+[affiche un java exception , il faut un fichier PARQUET pour voir son contenu. le fichier emp par contre est de type txt. les insert into , convertit automatique est un fichier parquet]
+>>Create temporary table EmpTemp (EMPNO int ,ENAME varchar(15),JOB varchar(15),MGR int ,Sal int , COMM int , DEPTNO int) row format delimited fields terminated by ',' ,tblproperties('skip.header.lin.count'='1','serialization.null.format'='');
+[pour charger le contenu du fichier txt dans la table stored as parquet , il faut :
+	-créer une table temporaire
+	-charger une table temporaire
+	-charger une table de type Parquet à partir de la table temporaire]
+>>truncate table empparquet;
+>>Insert into table Empparquet select * from EmpTemp ;
+>> select * from  Empparquet;[les donnéres sont affichés correctement]
+
+>>Create table EmpPartitioned (EMPNO int ,ENAME varchar(15),JOB varchar(15),MGR int ,Sal int , COMM int , DEPTNO int)partitioned by (DEPTNO int) row format delimited fields terminated by ',' ,tblproperties('skip.header.lin.count'='1','serialization.null.format'='');
+
+
+>> set hive.exec.dynamic.partition.mode=nonstrict;
+
+>> insert into EmpPartitioned partition 'deptno=10) values(1000,'ALLEN','SALESMAN',7698,1666,360),(1000,'ALLEN','SALESMAN',7698,1666,360);[na7i el departement khatrah déja mentionné fel partition]
+>> select * from emppartitioned ;
+[affiche toutes les données (la colonne deptno est affichée aussi; un repertoire "deptno=10" a été crée(car statiquement) sous partitioned contenant les données du 1ér insertion]
+>>insert into EmpPartitioned partition 'deptno=10) values(1000,'ALLEN','SALESMAN',7698,1666,360),(1000,'ALLEN','SALESMAN',7698,1666,360);
+[na7i el departement khatrah déja mentionné fel partition]
+
+
+insert into EmpPartitioned partition 'deptno=20) values(1000,'ALLEN','SALESMAN',7698,1666,360),(1000,'ALLEN','SALESMAN',7698,1666,360);[na7i el departement khatrah déja mentionné fel partition]
+[dynamique ,si le fichier le fichier existe , un autre sera créer] 
+

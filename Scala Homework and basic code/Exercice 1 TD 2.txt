@@ -1,0 +1,27 @@
+class Voiture (val fabricant: String, val modele: String , var V_max:Int=5000) {
+var vitesse: Double = 0;
+var isOn: Boolean = false;
+def start(): Unit = {
+isOn = true
+println(s"Voiture started ")
+}
+def accelerer(rate: Double): Unit = {
+vitesse += rate
+println(s"Voiture accelere a $rate par seconde.")
+} 
+def decelerer(rate: Double): Unit = {
+vitesse -= rate
+println(s"Voiture ralenti a $rate par seconde.")
+}
+def stop(): Unit = {
+vitesse = 0;
+isOn = false;
+println("Voiture s’arrete.")
+}
+}
+
+var V = new Voiture ("Toyota","Rav4")
+V.start()
+V.accelerer(0.7)
+V.decelerer(0.3)
+V.stop()
