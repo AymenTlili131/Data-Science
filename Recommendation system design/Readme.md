@@ -14,9 +14,9 @@
           - Spectral Centroid
           - 0 Crossing rate
           - Spectral Flux
-    - Create the user class and fill synthetic data
+    - Create the user class and fill it with synthetic data
     - Creating Recommendations (Content based)
-        - Creating Track Slusters using all the features
+        - Creating Track Clusters using all the features
         - Using Rule-Association to detect patterns from existing watch histories (A priori algorithm)
         - Recommending The next Song using the same cluster and the rules obtained 
 2. Project Idea and motivation:
