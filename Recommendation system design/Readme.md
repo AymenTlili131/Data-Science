@@ -36,7 +36,7 @@
 using non Copyright music:
   ![Youtube Genres](https://user-images.githubusercontent.com/75742617/174759841-f7704546-0930-405d-85ae-dd4365c565ae.png)<br>
   
-Project Architecture :view this svg in Light mode (green means accomplished , red means there's a problem we're figuring out , orange means we have solution/lacka  certain ressource btu gotta sit down and do it):
+Project Architecture :view this svg in Light mode (green means accomplished , red means there's a problem we're figuring out , orange means we have solution/lack a  certain ressource but got to sit down and do it):
 ![image](https://user-images.githubusercontent.com/75742617/174777935-31d9a151-2d99-4442-b5e4-0f333b98d73f.png)
 ![image](https://user-images.githubusercontent.com/75742617/174778045-135a0c5e-6234-4926-bfe1-269370cfb99c.png)
 
