@@ -32,6 +32,7 @@ Pappalardo, Luca; Massucco, Emanuele (2019): Soccer match event dataset. figshar
   - looked up sites specific to this type of analysis and found this dataset in an article 
 3. Project Technologies:
   - Pytorch, torchVision
+<br>
 4 .Project Improvements and To-Do list:
   - use Continual learning library Avalanche when transitionning between Game weeks
   - Use weight and biase to track the training process and Hardware usage
