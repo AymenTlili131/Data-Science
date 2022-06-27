@@ -28,7 +28,7 @@ Pappalardo, Luca; Massucco, Emanuele (2019): Soccer match event dataset. figshar
   - Everyone used CNNs in the context of computer vision and classification so I thought i'd go for regression instead
   - Initial idea was to work on predicting facial features after aging
   - I needed a dataset so I thought maybe get a cosmetic surgery or criminal/fugitive dataset but both have their shortcommings
-  - I decided to work on something familer : "soccer" , it was UCL around that time but it wasn't my cup of tea to watch but the calculations made by gambling sites intrested me
+  - I decided to work on something familier : "soccer" , it was UCL around that time but it wasn't my cup of tea to watch but the calculations made by gambling sites intrested me
   - looked up sites specific to this type of analysis and found this dataset in an article 
 3. Project Technologies:
   - Pytorch, torchVision
