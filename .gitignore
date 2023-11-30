@@ -1,4 +1,9 @@
 
+Depth estimation implementation/**/*.jpeg
+Depth estimation implementation/**/*.png
+Depth estimation implementation/**/*.xml
+Depth estimation implementation/**/*.bmp
+Depth estimation implementation/**/*.gz
 3 strategy Comparison/RL/trading-bot/
 *.pdf
 3 strategy Comparison/This SIMPLE Trading Strategy Has A 88.89% Winning Rate.mp4
