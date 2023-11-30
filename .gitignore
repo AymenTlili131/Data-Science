@@ -19,3 +19,4 @@ Customer Lifetime Expectancy/features.xls
 *.json
 Recommendation system design/vocal-remover/
 Soccer Analysis and Prediction/Analysis/Soccer Analysis/
+Depth estimation implementation/fcrn_pytorch/
